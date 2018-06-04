@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head controller : "weatherCtrl">
 	<title>Home</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/custom.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="fa/web-fa/css/fontawesome-all.css">
+  <link rel="stylesheet" type="text/css" href="assets/fa/web-fa/css/fontawesome-all.css">
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>    
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
@@ -22,17 +22,47 @@
             templateUrl : "collection.html"
           })
 
+          .when("/bags", {
+            templateUrl : "bags.html"
+          })
+
+          .when("/makeup", {
+            templateUrl : "makeup.html"
+          })
+
+          .when("/tops", {
+            templateUrl : "tops.html"
+          })
+
+          .when("/jeans", {
+            templateUrl : "jeans.html"
+          })
+
+          .when("/shoes", {
+            templateUrl : "shoes.html"
+          })
+
            .when("/profil", {
             templateUrl : "profil.html"
            })
+          
             .when("/location", {
-            templateUrl : "location.html", 
-          })
+            templateUrl : "location.html"
+           })
+
+            .when("/suhu", {
+            templateUrl : "suhu.html", controller : "weatherCtrl"
+           })
         });
 
+            app.controller('weatherCtrl', function($scope, $http){
+            $http.get('http://openweathermap.org/data/2.5/weather?q=Yogyakarta,id&appid=b6907d289e10d714a6e88b30761fae22')
+            .then(function(response){
+              $scope.info = response.data;
+            });
+          });
 
       </script>
-
 </head>
 <body>
 
@@ -49,23 +79,68 @@
 
   	<div class="row">
     	<div class="col-md-12 menu">
+    		<div class="menu-wrap">
         <ul>
-          <a #href="#!"><i class="fas fa-home"></i>
-          <a href="#!">HOME</a>
-          <a #href="#!"><i class="far fa-id-card"></i>
-          <a href="#!collection">COLLECTION</a>
-          <a #href="#!"><i class="fas fa-phone"></i>
-          <a href="#!profil">PROFIL</a>
-          <a #href="#!"><i class="far fa-star"></i>
-          <a href="#!location">LOCATION</a>
+        <li><a href=#!>Home</a></li>
+    	<li><a href=#!collection>Collection<i class="fas fa-sort-down"></i></a>
+      	<ul>
+        <li><a href=#!bags>Bags</a></li>
+        <li><a href=#!makeup>Makeup</a></li>
+        <li><a href=#!tops>Tops</a></li>
+        <li><a href=#!jeans>Jeans</a></li>
+        <li><a href=#!shoes>Shoes</a></li>
         </ul>
+      </li>
+    <li><a href=#!profil>Profil</a></li>
+    <li><a href=#!location>Location</a></li>
+    <li><a href="#!suhu">WEATHER</a></li>
+</ul>
+</div>
     	</div>
   	</div> 
+
     <ng-view></ng-view> 
 
 
     <footer>
   <div class="footer"> 
+    <div class="col-md-12 footer">
+    <br><br>
+      <table align="center"> 
+        <tr>
+          <td align="center"><strong>KANTOR PUSAT</strong><br>
+      AMIKOM YOGYAKARTA <br>
+      Jalan Ring Road Utara, Condongcatur, Depok<br>
+      Ngringin, Condongcatur, Kec.Depok, Kab.Sleman, DIY 55281<br><br><br><br></td>
+
+      <td align="center"><strong>AROUND THE WEB</strong><br>
+      <a href="https://www.facebook.com/chanel/" class="fab fa-facebook"></a>
+      <a href="https://twitter.com/CHANEL" class="fab fa-twitter"></a>
+      <a href="http://www.chanel.com" class="fab fa-google-plus-g"></a>
+      <a href="https://www.instagram.com/chanelofficial/" class="fab fa-instagram"></a>
+      <a href="https://www.linkedin.com/company/chanel" class="fab fa-linkedin-in"></a>
+      <a href="https://www.youtube.com/user/CHANEL" class="fab fa-youtube"></a>
+
+     
+
+    <br><br><br><br><br><br></td> 
+
+    <td align="center"><strong>ABOUT CHANEL</strong><br>
+      Founder: Coco Chanel<br>
+      Founded: 1910, Paris, France<br>
+      CEO: Alain Wertheimer (Feb 2016)<br>
+      Headquarters: Paris, France<br>
+      Creative director: Karl Lagerfeld<br>
+      Parent organization: Chanel International B.V.<br>
+    </td>
+    
+
+
+  </tr>
+  
+</table>
+
+      <br><br><br>
   </div>
 </footer>
 </div> 
