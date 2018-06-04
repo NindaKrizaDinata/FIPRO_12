@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="fa/web-fa/css/fontawesome-all.css">
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>    
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+    <script>
+      var app = angular.module("myApp", ["ngRoute"]);
+      app.config(function($routeProvider) {
+          $routeProvider
+          .when("/", {
+              templateUrl : "home.html"
+          })
+
+          .when("/collection", {
+            templateUrl : "collection.html"
+          })
+
+           .when("/profil", {
+            templateUrl : "profil.html"
+           })
+            .when("/location", {
+            templateUrl : "location.html", 
+          })
+        });
+
+
+      </script>
+
+</head>
+<body>
+
+<div ng-app="myApp">
+  	<div class="row header">
+	  		<div class="col-md-4 headerlogo">
+	  			<img src="assets/img/log.png">
+	  		</div>
+	  	 	<div class="col-md-8 headertitle">
+	  	 		<h1>C H A N E L</h1>
+	  	 	</div>
+	    
+  	</div>
+
+  	<div class="row">
+    	<div class="col-md-12 menu">
+        <ul>
+          <a #href="#!"><i class="fas fa-home"></i>
+          <a href="#!">HOME</a>
+          <a #href="#!"><i class="far fa-id-card"></i>
+          <a href="#!collection">COLLECTION</a>
+          <a #href="#!"><i class="fas fa-phone"></i>
+          <a href="#!profil">PROFIL</a>
+          <a #href="#!"><i class="far fa-star"></i>
+          <a href="#!location">LOCATION</a>
+        </ul>
+    	</div>
+  	</div> 
+    <ng-view></ng-view> 
+
+
+    <footer>
+  <div class="footer"> 
+  </div>
+</footer>
+</div> 
+
+</body>
+</html>
