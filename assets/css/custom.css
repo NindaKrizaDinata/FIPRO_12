@@ -1,0 +1,169 @@
+body{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.ng-scope{
+	width: 100%;
+	margin: 0;
+}
+
+.header{
+	background: white;
+	width: 100%;
+
+}
+
+.headerlogo img{
+	width: 200px;
+	height: 150px;
+
+}
+
+.container{
+	background:#ff3385;
+}
+
+.headertitle h1{
+	text-align: left;
+	padding: 25px 15px;
+	font-family: verdana;
+	font-size: 70px;
+
+}
+
+.menu{
+	margin: 0 auto;
+	background: black;
+	text-align: left;
+	color: white;
+	font-size: 20px;
+	word-spacing: 40px;
+	line-height: 50px;
+	padding-left: 175px;
+	position: relative;
+}
+.menu ul {
+	margin: 0;
+}
+.menu ul a{
+	display: inline;
+color: white;
+	text-decoration: none;
+font-family: verdana;
+}
+
+.menu ul a:hover{
+	color: white;
+	color: red;
+
+
+}
+.menu ul li a {
+	color: white;
+	margin: 0 auto;
+	text-decoration: none;
+	font-family: verdana;
+}
+.row{
+	background-image: url("f.jpg");
+	margin:0 auto;
+}
+* {margin:0; padding:0;}
+
+     .menu-wrap ul {
+	list-style:none;
+
+     }
+ 
+     .menu-wrap ul li a {
+ 	float:left; 
+	width:150px; 
+	display:block; 
+	text-decoration:none; 
+	text-transform:uppercase;
+	color: white;
+	text-align: center;
+	margin: 0 auto;
+	font-family: verdana;
+
+     }
+
+     .menu-wrap ul li a:hover {
+	
+	display:block;
+	color: white;
+	color: red;
+	text-align: center;
+
+     }
+ 
+     /*agar sub menu menimpa slider image*/
+     .menu-wrap ul li:hover ul {
+	display:block;
+	text-align: center;
+	z-index: 99;
+     }
+ 
+     .menu-wrap ul ul {
+	display:none; 
+	list-style:none; 
+	position:absolute; 
+	background-color:black;
+	left:300px; 
+	top:50px; 
+	width:190px;
+     }
+ 
+     .menu-wrap ul ul li a {
+	float:none; 
+	display:block; 
+	padding-left:30px; 
+	text-align:left; 
+	width:160px;
+     }
+    .menu-wrap ul li hover ul{
+    	z-index:100;
+    }
+     .menu-wrap ul ul li a:hover {
+	color:red;
+      }
+.carousel-item img{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	height: 500px;
+}
+
+.footer{
+	bottom: 0;
+}
+.footer { 
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    font-family: verdana;
+    color: white;
+
+    padding-left: 70px;
+    padding-right: 75px;
+
+}
+.footer ul img{
+	height: 250px;
+	width: 280px;
+}
+.footer table {
+	border:0;
+	font-family: verdana;
+}
+
+.suhu {
+	text-align: center;
+}
+
+.suhu img{
+	width: 450px;
+	height: 250px;
+}
+

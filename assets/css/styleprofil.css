@@ -1,0 +1,11 @@
+.profil{
+text-align: center;
+font-family: verdana; 
+}
+
+.profil p{
+	text-align: justify;
+	
+	padding-left: 25px;
+	padding-right: 25px;
+}
